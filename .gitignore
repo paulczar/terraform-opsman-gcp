@@ -1,0 +1,4 @@
+google.json
+*.tfstate
+*.backup
+.terraform
