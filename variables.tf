@@ -16,7 +16,7 @@ variable "network_services" {
 }
 
 variable "network_main" {
-  default = "192.168.16.0/22"
+  default = "192.168.16.0/26"
 }
 
 # GCP Settings
@@ -30,4 +30,9 @@ variable "region" {
 
 variable "zones" {
   default = ["us-central1-a", "us-central1-b", "us-central1-c"]
+}
+
+# will create a set of external IPs based on the provided names
+variable "external_ips" {
+  default = ["lb"]
 }

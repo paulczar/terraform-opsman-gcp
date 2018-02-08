@@ -277,8 +277,17 @@ resource "google_compute_instance" "opsman" {
   }
 }
 
+resource "google_compute_address" "extra" {
+  count = "${length(var.external_ips)}"
+  name  = "${var.environment}-${var.external_ips[count.index]}"
+}
+
 output "Opsman URL" {
   value = "https://${google_compute_address.opsman.address}"
+}
+
+output "External IPs" {
+  value = "${formatlist("${var.environment}-%v - %v",  var.external_ips, google_compute_address.extra.*.address)}"
 }
 
 output "google config" {
