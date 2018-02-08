@@ -295,7 +295,7 @@ output "google config" {
 
 Project ID: ${var.project}
 Default deployment tag: ${var.environment}
-Auth Json: ./google.json
+Auth Json: [copy and paste contents of ./google.json]
 OUTPUT
 }
 
