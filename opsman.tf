@@ -341,7 +341,7 @@ Network 2:
 - DNS: 169.254.169.254
 - Gateway: ${cidrhost(var.network_services,1)}
 - Availability Zones: ${element(var.zones, 0)},${element(var.zones, 1)},${element(var.zones, 2)}
-Network 2:
+Network 3:
 - Name: ${var.environment}-infrastructure
 - Google Network Name: ${var.environment}-virt-net/${var.environment}-subnet-infrastructure-${var.region}/${var.region}
 - CIDR: ${var.network_infrastructure}
